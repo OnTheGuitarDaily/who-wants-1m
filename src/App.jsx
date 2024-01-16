@@ -1,9 +1,13 @@
-import React from 'react'
+import { Provider } from "react-redux"
+import Questions from "./Components/Questions/Questions"
+import store from "./App/store"
 
-export default function App() {
+export default function app() {
   return (
-    <div>
-      <h1>Installed Packeges</h1>
-    </div>
+    <>
+    <Provider store={store}>
+      <Questions/>
+    </Provider>
+    </>
   )
 }

@@ -1,0 +1,154 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the capital city of France?",
+      "answers": [
+        {"text": "Paris", "isCorrect": true},
+        {"text": "Berlin", "isCorrect": false},
+        {"text": "Madrid", "isCorrect": false},
+        {"text": "Rome", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 2,
+      "question": "In which year did the Titanic sink?",
+      "answers": [
+        {"text": "1912", "isCorrect": true},
+        {"text": "1905", "isCorrect": false},
+        {"text": "1920", "isCorrect": false},
+        {"text": "1935", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Which planet is known as the Red Planet?",
+      "answers": [
+        {"text": "Mars", "isCorrect": true},
+        {"text": "Venus", "isCorrect": false},
+        {"text": "Jupiter", "isCorrect": false},
+        {"text": "Saturn", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 4,
+      "question": "What is the largest mammal in the world?",
+      "answers": [
+        {"text": "Blue Whale", "isCorrect": true},
+        {"text": "Elephant", "isCorrect": false},
+        {"text": "Giraffe", "isCorrect": false},
+        {"text": "Hippopotamus", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Who wrote the play 'Romeo and Juliet'?",
+      "answers": [
+        {"text": "William Shakespeare", "isCorrect": true},
+        {"text": "Charles Dickens", "isCorrect": false},
+        {"text": "Jane Austen", "isCorrect": false},
+        {"text": "Emily Brontë", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 6,
+      "question": "What is the chemical symbol for gold?",
+      "answers": [
+        {"text": "Au", "isCorrect": true},
+        {"text": "Ag", "isCorrect": false},
+        {"text": "Fe", "isCorrect": false},
+        {"text": "Cu", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 7,
+      "question": "Which of the following is a prime number?",
+      "answers": [
+        {"text": "29", "isCorrect": true},
+        {"text": "16", "isCorrect": false},
+        {"text": "21", "isCorrect": false},
+        {"text": "35", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 8,
+      "question": "What is the capital of Japan?",
+      "answers": [
+        {"text": "Tokyo", "isCorrect": true},
+        {"text": "Beijing", "isCorrect": false},
+        {"text": "Seoul", "isCorrect": false},
+        {"text": "Osaka", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 9,
+      "question": "In which year did the United States declare its independence?",
+      "answers": [
+        {"text": "1776", "isCorrect": true},
+        {"text": "1676", "isCorrect": false},
+        {"text": "1876", "isCorrect": false},
+        {"text": "1789", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 10,
+      "question": "What is the currency of Australia?",
+      "answers": [
+        {"text": "Dollar", "isCorrect": true},
+        {"text": "Euro", "isCorrect": false},
+        {"text": "Peso", "isCorrect": false},
+        {"text": "Rupee", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 11,
+      "question": "Who painted the Mona Lisa?",
+      "answers": [
+        {"text": "Leonardo da Vinci", "isCorrect": true},
+        {"text": "Vincent van Gogh", "isCorrect": false},
+        {"text": "Pablo Picasso", "isCorrect": false},
+        {"text": "Claude Monet", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 12,
+      "question": "Which gas do plants absorb from the atmosphere during photosynthesis?",
+      "answers": [
+        {"text": "Carbon Dioxide", "isCorrect": true},
+        {"text": "Nitrogen", "isCorrect": false},
+        {"text": "Oxygen", "isCorrect": false},
+        {"text": "Hydrogen", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 13,
+      "question": "What is the largest ocean on Earth?",
+      "answers": [
+        {"text": "Pacific Ocean", "isCorrect": true},
+        {"text": "Atlantic Ocean", "isCorrect": false},
+        {"text": "Indian Ocean", "isCorrect": false},
+        {"text": "Arctic Ocean", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 14,
+      "question": "What is the speed of light in a vacuum?",
+      "answers": [
+        {"text": "300,000 kilometers per second", "isCorrect": true},
+        {"text": "150,000 kilometers per second", "isCorrect": false},
+        {"text": "500,000 kilometers per second", "isCorrect": false},
+        {"text": "200,000 kilometers per second", "isCorrect": false}
+      ]
+    },
+    {
+      "id": 15,
+      "question": "Who is the author of the Harry Potter book series?",
+      "answers": [
+        {"text": "J.K. Rowling", "isCorrect": true},
+        {"text": "J.R.R. Tolkien", "isCorrect": false},
+        {"text": "George R.R. Martin", "isCorrect": false},
+        {"text": "Roald Dahl", "isCorrect": false}
+      ]
+    }
+  ]
+}
