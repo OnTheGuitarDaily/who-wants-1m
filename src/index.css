@@ -1,0 +1,137 @@
+/* *{
+    border: 1px dashed white;
+} */
+
+body{
+    color: white;
+    background-position: center;
+    overflow: hidden;
+
+}
+
+main{
+    background-color: black;
+    opacity: 85%;
+    position: absolute;
+    top: 20%;
+    height: 50vh;
+}
+
+main a{
+width: 100px;
+}
+
+nav{
+    background-color: black;
+    position: relative;
+    z-index: 1000;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+.QuestionList{
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    height: 80vh;
+    opacity: 85%; 
+}
+
+
+.Question::before{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%; 
+    background-color: white; 
+}
+.Answer{
+    height: 70px;
+}
+
+.Question::after{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%; 
+    background-color: white; 
+}
+.Answer::before{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%; 
+    background-color: white; 
+}
+.Answer::after{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%; 
+    background-color: white; 
+}
+
+.Answer h4{
+ border: 1px solid white;
+ border-radius: 20px;
+ height: 100%;
+ line-height: .8
+}
+.Answer h4:hover{
+ border: 1px solid red;
+ color: red;
+}
+
+
+.Question h1{
+ border: 1px solid white;
+ border-radius: 10px;
+}
+
+
+ul{
+    padding: 0;
+}
+
+li{
+list-style: none;
+}
+
+
+button{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    width: 100px;
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.Prize{
+position: absolute;
+background-color: black;
+height: 100vh;
+right: 0%;
+top: 100%;
+z-index: 1000;
+animation: slidein 0.2s ease-in-out forwards;
+}
+
+@keyframes slidein {
+    from {
+        right: -100%;
+    }
+  
+    to {
+      right: 0%;
+    }
+  }
+.red{
+    color: red;
+    border: 1px solid red;
+}

@@ -1,4 +1,6 @@
-import React from 'react';
+import { useState } from 'react';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from "react-router-dom";
 
 const prizeList = [
   { level: 1, amount: '$100' },
@@ -18,23 +20,37 @@ const prizeList = [
   { level: 15, amount: '$1,000,000' },
 ];
 
-export default function Prizes({ currentQuestionIndex }) {
-  return (
-    <div>
-      <h1>Prizes</h1>
-      <ul>
+export default function Nav({ currentQuestionIndex }) {
+  const [isActive, setIsActive] = useState(false)
+  const handleClick = () => {
+    setIsActive(!isActive)
+  }
+  return (<>
+   <nav className='col-12 d-flex justify-content-between'>
+      <Link to={'/'}>
+        <h1>1M Game</h1>
+      </Link>
+      <MenuIcon fontSize="large" onClick={handleClick}/>
+    {isActive && <>
+      <ul className='Prize d-flex flex-column gap-2 p-4'>
+      <p>Your Win:</p>
         {prizeList.map((prize, index) => (
           <li
             key={prize.level}
             style={{
-              color: index + 1 <= currentQuestionIndex ? 'green' : 'black',
-              fontWeight: index + 1 === currentQuestionIndex ? 'bold' : 'normal',
+              color: index + 1 <= currentQuestionIndex && 'green',
+              fontWeight: index + 1 === currentQuestionIndex && 'bold',
             }}
           >
             Level {prize.level}: {prize.amount}
           </li>
         ))}
       </ul>
-    </div>
+    </>
+        
+      }
+       </nav>
+  </>
+   
   );
 }

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import QuestionList from './QuestionList/QuestionList'
-import Prizes from '../Prizes/Prizes';
+import Nav from '../Nav/Nav';
 import { fetchData } from '../../Actions/actions'
 import { useState, useEffect } from 'react';
 
@@ -9,7 +9,7 @@ export default function Questions() {
   const state = useSelector((state) => state.quiz);
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-
+  const [isActive, setIsActive] = useState(false)
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -33,13 +33,14 @@ export default function Questions() {
   }, []);
 
   return (
-    <div>
-      <Prizes currentQuestionIndex={currentQuestionIndex}/>
-      <QuestionList 
+    <>
+    <Nav currentQuestionIndex={currentQuestionIndex}/>
+    <QuestionList 
       questions={questions}
       currentQuestionIndex={currentQuestionIndex}
       setCurrentQuestionIndex={setCurrentQuestionIndex}
-      />
-    </div>
+    />
+    
+    </>
   )
 }
