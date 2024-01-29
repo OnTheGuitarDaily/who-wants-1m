@@ -103,12 +103,10 @@ list-style: none;
 
 button{
     border: 1px solid white;
-    background-color: transparent;
-    color: white;
+    background-color: #16FF00;
+    color: black;
     width: 100px;
     height: 40px;
-    margin: 0 auto;
-    display: block;
     border-radius: 8px;
 }
 

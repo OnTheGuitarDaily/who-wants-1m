@@ -10,3 +10,14 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
     }
   }
  )
+
+ export const setWinnigPrize = createAsyncThunk('quiz/setPrize', async () => {
+  try {
+    const res = await fetch('./prizeData.json');
+    const data = await res.json()
+    return data.prize
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+)

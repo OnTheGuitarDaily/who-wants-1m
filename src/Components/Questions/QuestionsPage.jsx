@@ -1,15 +1,17 @@
 import { useDispatch, useSelector } from 'react-redux';
 import QuestionList from './QuestionList/QuestionList'
 import Nav from '../Nav/Nav';
-import { fetchData } from '../../Actions/actions'
+import { fetchData, setWinnigPrize } from '../../Actions/actions'
 import { useState, useEffect } from 'react';
+
 
 export default function Questions() {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.quiz);
+  const quiz = useSelector((state) => state.game.quiz);
+  const winningPrize = useSelector((state) => state.game.winningPrize);
   const [questions, setQuestions] = useState([]);
+  const [prize, setPrize] = useState([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [isActive, setIsActive] = useState(false)
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -20,21 +22,23 @@ export default function Questions() {
   };
 
   useEffect(() => {
-    setQuestions(state.quiz.map((question) => {
+    setPrize(winningPrize)
+    setQuestions(quiz.map((question) => {
       return {
         ...question,
         answers: shuffleArray([...question.answers]),
       };
     }));
-  }, [state.quiz]);
+  }, [quiz, winningPrize]);
 
   useEffect(() => {
     dispatch(fetchData());
+    dispatch(setWinnigPrize());
   }, []);
 
   return (
     <>
-    <Nav currentQuestionIndex={currentQuestionIndex}/>
+    <Nav currentQuestionIndex={currentQuestionIndex} prize={prize}/>
     <QuestionList 
       questions={questions}
       currentQuestionIndex={currentQuestionIndex}

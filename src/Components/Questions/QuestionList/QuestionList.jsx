@@ -14,7 +14,7 @@ export default function QuestionList({ questions, currentQuestionIndex, setCurre
     setIsCorrect(questions[currentQuestionIndex].answers[index].isCorrect);
   };
 
-  const handleClick = () => {
+  const handleNextClick = () => {
     if (selectedAnswerIndex === null) {
       Swal.fire({
         icon: "warning",
@@ -55,6 +55,18 @@ export default function QuestionList({ questions, currentQuestionIndex, setCurre
     }
   };
 
+  const handleLeaveClick = () => {
+    Swal.fire({
+      title: "Do you want to leave the game?",
+      showDenyButton: true,
+      confirmButtonText: "Yes",
+      denyButtonText: `No`
+    }).then((result) => {
+      if (result.isConfirmed) {
+        navigate('/prize');
+      } 
+    });
+ }
   return (
     <section>
       {questions.length === 0 ? (
@@ -76,7 +88,11 @@ export default function QuestionList({ questions, currentQuestionIndex, setCurre
               </li>
             ))}
           </ul>
-          <button onClick={handleClick}>Next</button>
+          <div className="d-flex justify-content-center gap-5 mt-4">
+            <button style={{backgroundColor: '#E90064'}} onClick={handleLeaveClick}>Leave</button>
+            <button onClick={handleNextClick}>Next</button>
+
+          </div>
         </div>
       )}
     </section>

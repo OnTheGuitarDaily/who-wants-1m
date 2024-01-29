@@ -1,19 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchData } from "../../Actions/actions";
+import { fetchData, setWinnigPrize } from "../../Actions/actions";
 
 const initialState = {
-    quiz: []
+    quiz: [],
+    winningPrize: []
 }
-const quizSlice = createSlice({
-    name: 'quiz',
+const gameSlice = createSlice({
+    name: 'game',
     initialState,
     extraReducers: (builder) => {
         builder
           .addCase(fetchData.fulfilled, (state, action) => {
             state.quiz = action.payload;
           })
+          .addCase(setWinnigPrize.fulfilled, (state, action) => {
+            state.winningPrize = action.payload
+          })
       },
 }
 )
 
-export default quizSlice.reducer;
+export default gameSlice.reducer;
